@@ -1,7 +1,12 @@
-from scripts.video_processing import trim_video
-from scripts.audio_processing import adjust_audio
-from scripts.speech_to_text import transcribe_audio
-from scripts.combine_media import combine_audio_with_video
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'scripts')))
+
+from video_processing import trim_video
+from audio_processing import adjust_audio
+from speech_to_text import transcribe_audio
+from combine_media import combine_audio_with_video
+
 
 def main():
     # Step 1: Trim video
